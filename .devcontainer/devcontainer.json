@@ -10,7 +10,8 @@
       "extensions": [
         "ms-python.python",
         "ms-toolsai.jupyter",
-        "redhat.vscode-yaml"
+        "redhat.vscode-yaml",
+        "ms-playwright.playwright"
       ],
       "settings": {
         "python.defaultInterpreterPath": "/usr/local/bin/python"

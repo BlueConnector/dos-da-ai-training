@@ -54,7 +54,9 @@ data/sites_output/
 ## Lab Workflow
 
 # 1. Start Codespaces → auto-installs everything
+```bash
 $ python -m src.process_multi_site
+```
 📋 Scraping 3 sites...
 ✅ redmart: 47 items → data/sites_output/redmart.csv
 ✅ sample_store: 6 items → data/sites_output/sample_store.csv
@@ -67,7 +69,9 @@ $ python -m src.process_multi_site
 ⚠️ sample_store: 0/6 names found (layout drift detected)
 
 # 3. Fix via YAML only
+```bash
 $ # Edit config/selectors_sample.yaml → add fallbacks
 $ python -m src.process_multi_site
+```
 ✅ sample_store: 6/6 recovered via fallback selectors
 
