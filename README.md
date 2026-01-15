@@ -60,8 +60,10 @@ $ python -m src.process_multi_site
 ✅ sample_store: 6 items → data/sites_output/sample_store.csv
 
 # 2. Lab: simulate site change
+```bash
 $ # Edit scraping_targets.csv → point to products_v2.html
 $ python -m src.process_multi_site
+```
 ⚠️ sample_store: 0/6 names found (layout drift detected)
 
 # 3. Fix via YAML only
