@@ -8,10 +8,8 @@
 
 ```bash
 python -m src.process_multi_site
-
+```
 Output: data/sites_output/*.csv (one per site)
-
-
 
 ## For Statisticians (No Python Required)
 ### Add new sites
