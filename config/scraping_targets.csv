@@ -1,0 +1,4 @@
+site_name,url,data_types,max_pages,priority,config_file,scrape_frequency,timeout_ms,min_items,notes
+sample_store,file:///workspaces/dos-da-ai-training/sample_site/products_v1.html,"groceries",1,high,selectors_sample.yaml,daily,10000,5,"Lab training site - version 1"
+redmart_groceries,https://www.lazada.sg/shop/redmart-groceries/,"groceries,consumer_prices",2,high,selectors_redmart.yaml,daily,15000,20,"CPI priority - RedMart groceries"
+ntuc_fairprice,https://www.fairprice.com.sg/category/fresh-food,"groceries,fresh_produce",1,medium,selectors_ntuc.yaml,daily,12000,15,"Main competitor supermarket"

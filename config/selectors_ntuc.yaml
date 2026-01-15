@@ -1,0 +1,24 @@
+site_name: "ntuc_fairprice"
+timeout_ms: 12000
+min_items: 15
+
+wait_selectors:
+  - ".product-tile"
+  - ".product-card"
+
+product:
+  card_selectors:
+    - ".product-tile"
+    - ".product-card"
+  
+  fields:
+    name:
+      selectors:
+        - ".product-name"
+        - ".product-title"
+        - "h3"
+      
+    price:
+      selectors:
+        - ".price"
+      default: "groceries"

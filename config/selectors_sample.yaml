@@ -1,0 +1,32 @@
+site_name: "sample_store"
+timeout_ms: 10000
+min_items: 5
+
+wait_selectors:
+  - ".product-list"
+  - ".product-card"
+
+product:
+  card_selectors:
+    - ".product-card"
+    - "div[role='listitem']"
+  
+  fields:
+    name:
+      selectors:
+        - ".product-name"
+        - ".product-title"
+        - "h2"
+        - "h3"
+      
+    price:
+      selectors:
+        - ".product-price"
+        - ".price"
+        - ".amount"
+        - "span:has-text('$')"
+      
+    category:
+      selectors:
+        - ".product-category"
+      default: "groceries"

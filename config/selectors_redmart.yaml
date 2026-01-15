@@ -1,0 +1,44 @@
+site_name: "redmart_groceries"
+timeout_ms: 15000
+wait_selectors:  # Proof selectors - wait for ANY to confirm page loaded
+  - "div[data-qa-locator='product-item']"
+  - ".RfADt"  # common RedMart container
+
+product:
+  card_selectors:  # Try these in order to find product containers
+    - "div[data-qa-locator='product-item']"
+    - ".RfADt"
+    - "div[role='listitem']"
+  
+  fields:
+    name:
+      selectors:
+        - "[data-qa-locator='product-title']"
+        - ".RfADt a[title]"
+        - "a[href*='product']"
+      min_length: 3  # validation rules
+      max_length: 100
+      
+    price:
+      selectors:
+        - "[data-qa-locator='product-price']"
+        - ".ooOxS"
+        - "span: has-text('S$')"  # Playwright text selector
+      pattern: "S?\\$?\\d+\\.\\d{2}"  # regex validation
+      
+    category:  # optional fields
+      selectors:
+        - "[data-qa-locator='product-category']"
+        - ".category-badge"
+      default: "groceries"  # if not found
+    
+    url:
+      selectors:
+        - "a[href*='product']"
+      attribute: "href"
+
+pagination:
+  next_button_selectors:
+    - "button[aria-label*='Next']"
+    - ".ant-pagination-next"
+  disabled_attribute: "disabled"
