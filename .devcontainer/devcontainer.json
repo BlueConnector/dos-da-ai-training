@@ -1,5 +1,5 @@
 {
-  "name": "DOS Web Scraping Lab",
+  "name": "DOS Web Scraping Lab (Playwright Ready)",
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}
@@ -10,12 +10,17 @@
       "extensions": [
         "ms-python.python",
         "ms-toolsai.jupyter",
-        "redhat.vscode-yaml"
+        "redhat.vscode-yaml",
+        "ms-vscode.vscode-json"
       ],
       "settings": {
         "python.defaultInterpreterPath": "/usr/local/bin/python"
       }
     }
   },
-  "forwardPorts": [3000]
+  "remoteEnv": {
+    "DISPLAY": "",
+    "PLAYWRIGHT_BROWSERS_PATH": "0"
+  },
+  "runArgs": ["--shm-size=1gb"]
 }
