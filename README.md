@@ -69,34 +69,3 @@ $ # Edit config/selectors_sample.yaml → add fallbacks
 $ python -m src.process_multi_site
 ✅ sample_store: 6/6 recovered via fallback selectors
 
-
-
-dos-da-ai-training/
-├── .devcontainer/
-│   └── devcontainer.json                    # Codespaces config (Playwright ready)
-├── config/
-│   ├── scraping_targets.csv                  # MASTER: sites + data types (Excel!)
-│   ├── selectors_redmart.yaml                # Site-specific selectors/fallbacks
-│   ├── selectors_sample.yaml                 # Lab exercise selectors
-│   └── selectors_ntuc.yaml                   # Example for competitor site
-├── data/
-│   ├── sample_prices.csv                     # Lab warm-up data
-│   └── sites_output/                         # AUTO-GENERATED per-site CSVs
-│       ├── redmart.csv
-│       ├── sample_store.csv
-│       └── ntuc_fairprice.csv
-├── sample_site/
-│   ├── products_v1.html                      # Original (works with default selectors)
-│   └── products_v2.html                      # "Broken" version for lab (class changes)
-├── src/
-│   ├── __init__.py
-│   ├── universal_scraper.py                  # CORE: 1 engine → ALL sites
-│   ├── process_multi_site.py                 # Orchestrator: CSV → multi-site runs
-│   ├── utils.py                              # Fallback helpers, parsing, logging
-│   └── brittle_scraper.py                    # LAB: contrast with old approach
-├── notebooks/
-│   └── lab_overview.ipynb                    # Optional: Jupyter walkthrough
-├── README.md                                 # Lab instructions + architecture
-├── requirements.txt                          # pandas, playwright, pyyaml
-└── .gitignore
-
