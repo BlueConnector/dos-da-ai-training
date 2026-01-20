@@ -11,7 +11,8 @@
         "ms-python.python",
         "ms-toolsai.jupyter",
         "redhat.vscode-yaml",
-        "ms-vscode.vscode-json"
+        "ms-vscode.vscode-json",
+        "ritwickdey.liveserver"
       ],
       "settings": {
         "python.defaultInterpreterPath": "/usr/local/bin/python"
