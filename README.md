@@ -36,9 +36,13 @@ Exercise 3: RedMart "selector drift" → YAML-only recovery
 ## 📊 Expected Output
 
 data/sites_output/
+
 ├── redmart_groceries.csv     (47 items)
-├── sample_store.csv          (6 items)  
+
+├── sample_store.csv          (6 items)
+
 ├── ntuc_fairprice.csv        (24 items)
+
 └── all_sites_summary.csv     (combined)
 
 
