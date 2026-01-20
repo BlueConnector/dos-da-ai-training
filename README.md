@@ -43,12 +43,12 @@ data/sites_output/
 
 
 
-✅ Statisticians: edit CSV/YAML (no Python needed)
-✅ Engineers: maintain ONE universal engine
-✅ Scale: 5→50 sites = add CSV rows
-✅ Resilience: 4-tier fallbacks built-in
-✅ Audit: full logs + per-site CSVs
-✅ Lab-ready: sample sites + "broken" versions for training
+✅ Statisticians: edit CSV/YAML (no Python needed)\n
+✅ Engineers: maintain ONE universal engine\n
+✅ Scale: 5→50 sites = add CSV rows\n
+✅ Resilience: 4-tier fallbacks built-in\n
+✅ Audit: full logs + per-site CSVs\n
+✅ Lab-ready: sample sites + "broken" versions for training\n
 
 
 ## Lab Workflow

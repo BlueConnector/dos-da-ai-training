@@ -2,8 +2,9 @@ import asyncio
 import yaml
 from typing import Dict, List, Any
 import pandas as pd
+from pathlib import Path
 from playwright.async_api import async_playwright, TimeoutError
-from .utils import first_match_text, first_match_attribute, ensure_output_dir
+from .utils import first_match_text, first_match_attribute, ensure_output_dir, save_dataframe
 
 async def scrape_site(site_config: Dict[str, Any]) -> pd.DataFrame:
     """Universal scraper: ANY site via YAML/CSV config."""
@@ -18,7 +19,15 @@ async def scrape_site(site_config: Dict[str, Any]) -> pd.DataFrame:
         page = await browser.new_page()
         
         try:
-            await page.goto(url, timeout=site_config.get("timeout_ms", 10000))
+            if url.startswith("file://"):
+                file_path = Path(url[7:])  # Remove 'file://'
+                if file_path.exists():
+                    content = file_path.read_text()
+                    await page.set_content(content)
+                else:
+                    raise FileNotFoundError(f"Local file not found: {file_path}")
+            else:
+                await page.goto(url, timeout=site_config.get("timeout_ms", 10000))
             rows = await extract_products(page, site_config)
         finally:
             await browser.close()
